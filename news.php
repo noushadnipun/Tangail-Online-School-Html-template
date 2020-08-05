@@ -1,5 +1,5 @@
+<?php include 'header.php'; ?>
 <section class="mt-2">
-	<h2 class="text-success text-center py-4">প্রতিদিনের সংবাদ</h2>
 	<div class="row">
 		<div class="col-md-2">
 			<div class="news-side-menu">
@@ -43,7 +43,7 @@
 						</a>
 					</div>
 					<div class="article-description">
-						<a href="#">
+						<a href="single-news.php">
 							<h4>বিশ্বে করোনায় মৃত ৬ লাখ ৩ হাজার ছাড়িয়েছে</h4>
 						</a>
 						<div class="additional-info">
@@ -58,6 +58,25 @@
 				</div>
 			</div><!-- end news list blcok -->
 			<?php } ?>
+			<nav aria-label="Page navigation" class="custom-paginition">
+			  	<ul class="pagination">
+				    <li class="page-item">
+				      <a class="page-link" href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				        <span class="sr-only">Previous</span>
+				      </a>
+				    </li>
+				    <li class="page-item"><a class="page-link" href="#">1</a></li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				    <li class="page-item">
+				      <a class="page-link" href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				        <span class="sr-only">Next</span>
+				      </a>
+				    </li>
+			  	</ul>
+			</nav>
 		</div><!-- End Col 7 -->
 		<div class="col-md-3">
 			<div class="trending-news-horizonrtal">
@@ -93,3 +112,4 @@
 		</div><!-- End Col 3 -->
 	</div><!-- End Row -->
 </section>
+<?php include 'footer.php' ?>

@@ -27,9 +27,11 @@
                         <p class="lead font-solaimanlipi">আমার হাতে আমার স্কুল</p>
                     </div>
                     <div class="col-md-5 col-5 pt-2">
-                        <div class="row justify-content-end mr-md-3 align-items-center h-100">
-                            <a href="#" class="btn btn-sm btn-primary mr-2">বাংলা</a>
-                            <a href="#" class="btn btn-sm btn-primary">English</a>
+                        <div class="row justify-content-end mr-md-3 align-items-center h-100 language">
+                            <div class="lang btn-group">
+                              <a class="language-btn btn btn-sm text-white bg-purple active" href=""> বাংলা </a>
+                              <a class="language-btn btn btn-sm text-white bg-purple " href=""> English </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,17 +59,17 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="text-white navbar-nav text-center font-weight-700 text-uppercase">
                 <li class="nav-item"><a class="nav-link" href="index.php">প্রচ্ছদ</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.php">বাণী</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.php">প্রশাসন</a></li>
+                <li class="nav-item"><a class="nav-link" href="message.php">বাণী</a></li>
+                <li class="nav-item"><a class="nav-link" href="administration.php">প্রশাসন</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.php">এডমিন প্যানেল</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.php">ICT4E অ্যাম্বাসেডর</a></li>
+                <li class="nav-item"><a class="nav-link" href="administration.php">ICT4E অ্যাম্বাসেডর</a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="about_us" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">প্রতিযোগিতা</a>
                     <ul class="dropdown-menu" aria-labelledby="about_us">
                       <li class="dropdown-item"><a href="single.php">বিতর্ক</a></li>
                       <li class="dropdown-item"><a href="#">কুইজ</a></li>
                       <li class="dropdown-item"><a href="#">অনলাইন টেস্ট</a></li>
-                      <li class="dropdown-item"><a href="#">ফলাফল</a></li>
+                      <li class="dropdown-item"><a href="result.php">ফলাফল</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -77,12 +79,13 @@
                       <li class="dropdown-item"><a href="">শিক্ষক মন্ডলী</a></li>
                       <li class="dropdown-item"><a href="">বই বিতরণ</a></li>
                       <li class="dropdown-item"><a href="">আইসিটি ল্যাব</a></li>
-                      <li class="dropdown-item"><a href="">ফলাফল</a></li>
+                      <li class="dropdown-item"><a href="result.php">ফলাফল</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">সংবাদ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">পাবলিক পরীক্ষার ফলাফল</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">যোগাযোগ</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.php">সংবাদ</a></li>
+                <li class="nav-item"><a class="nav-link" href="result.php">পাবলিক পরীক্ষার ফলাফল</a></li>
+                <li class="nav-item"><a class="nav-link" href="video.php">শ্রেণি ক্লাশ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">যোগাযোগ</a></li>
             </ul>
           </div>
         </nav>
