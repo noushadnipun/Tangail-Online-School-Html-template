@@ -1,32 +1,14 @@
 // navbar dropedown
-$(document).ready(function() {
-
-    $('.navbar .dropdown-item').on('click', function(e) {
-        var $el = $(this).children('.dropdown-toggle');
-        var $parent = $el.offsetParent(".dropdown-menu");
-        $(this).parent("li").toggleClass('open');
-
-        if (!$parent.parent().hasClass('navbar-nav')) {
-            if ($parent.hasClass('show')) {
-                $parent.removeClass('show');
-                $el.next().removeClass('show');
-                $el.next().css({ "top": -999, "left": -999 });
-            } else {
-                $parent.parent().find('.show').removeClass('show');
-                $parent.addClass('show');
-                $el.next().addClass('show');
-                $el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 });
-            }
-            e.preventDefault();
-            e.stopPropagation();
-        }
+$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    if (!$(this).next().hasClass('show')) {
+        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    var $subMenu = $(this).next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+        $('.dropdown-submenu .show').removeClass("show");
     });
-
-    $('.navbar .dropdown').on('hidden.bs.dropdown', function() {
-        $(this).find('li.dropdown').removeClass('show open');
-        $(this).find('ul.dropdown-menu').removeClass('show open');
-    });
-
+    return false;
 });
 
 
@@ -58,41 +40,6 @@ $(window).on("load resize", function() {
     $dropdown.off("mouseenter mouseleave");
   }
 });
-
-
-/* 
-===============================
-Video gallery slider  side show
-===============================
-*/
-
-var button = document.getElementById('slideNext');
-button.onclick = function() {
-    var container = document.getElementById('video_slider_thumb_container');
-    sideScroll(container, 'right', 25, 100, 10);
-};
-
-var back = document.getElementById('slideBack');
-back.onclick = function() {
-    var container = document.getElementById('video_slider_thumb_container');
-    sideScroll(container, 'left', 25, 100, 10);
-};
-
-function sideScroll(element, direction, speed, distance, step) {
-    scrollAmount = 0;
-    var slideTimer = setInterval(function() {
-        if (direction == 'left') {
-            element.scrollLeft -= step;
-        } else {
-            element.scrollLeft += step;
-        }
-        scrollAmount += step;
-        if (scrollAmount >= distance) {
-            window.clearInterval(slideTimer);
-        }
-    }, speed);
-}
-
 
 
 /*==================================
@@ -127,3 +74,36 @@ $(document).ready(function() {
   })
  
 });
+
+/* 
+===============================
+Video gallery slider  side show
+===============================
+*/
+
+var button = document.getElementById('slideNext');
+button.onclick = function() {
+    var container = document.getElementById('video_slider_thumb_container');
+    sideScroll(container, 'right', 25, 100, 10);
+};
+
+var back = document.getElementById('slideBack');
+back.onclick = function() {
+    var container = document.getElementById('video_slider_thumb_container');
+    sideScroll(container, 'left', 25, 100, 10);
+};
+
+function sideScroll(element, direction, speed, distance, step) {
+    scrollAmount = 0;
+    var slideTimer = setInterval(function() {
+        if (direction == 'left') {
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if (scrollAmount >= distance) {
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}

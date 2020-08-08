@@ -252,6 +252,26 @@ a.nav-link.active {
     background-color: #ff7600;
 }
 
+/* dropdown under Dropdown */
+.dropdown-item {
+    position:relative;
+}
+.dropdown-item>.dropdown-menu {
+    top:0;
+    left: 189px;
+}
+
+.dropdown-menu > li > a:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+/* */
 
 .site-widget-image {
     margin: 0px 0px 10px 0px;
